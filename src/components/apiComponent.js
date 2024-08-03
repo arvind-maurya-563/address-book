@@ -8,6 +8,5 @@ export const getApiUrl = ()=>{
 export const getSecureKey = (data)=>{
     const jsonString = JSON.stringify(data);
     const dataWithSecret = jsonString + CRC_KEY;
-    console.log(dataWithSecret)
     return crc32.str(dataWithSecret).toString(16);
 }
